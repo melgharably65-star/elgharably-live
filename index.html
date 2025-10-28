@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="بث مباشر عالي الجودة">
+    <meta name="theme-color" content="#667eea">
+    <title>بث مباشر - Live Stream</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="logo.png" alt="Logo" class="logo">
+                </div>
+            </div>
+        </header>
+
+        <!-- Video Container -->
+        <main class="main-content">
+            <!-- Page Title -->
+            <div class="page-title">
+                <h1 class="title-text">البـث المبـاشـر</h1>
+            </div>
+            
+            <div class="video-container" id="videoContainer">
+                <!-- Live Indicator on Video -->
+                <div class="live-indicator-overlay">
+                    <div class="live-dot-overlay"></div>
+                    <span class="live-text-overlay">مباشر</span>
+                </div>
+                
+                <div class="video-wrapper">
+                    <iframe 
+                        id="youtubePlayer"
+                        src=""
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope" 
+                        allowfullscreen
+                        title="Live Stream"
+                        sandbox="allow-scripts allow-same-origin"
+                        style="pointer-events: none; user-select: none; -webkit-user-select: none;">
+                    </iframe>
+                </div>
+                
+
+                <!-- Error Screen -->
+                <div class="error-screen" id="errorScreen" style="display: none;">
+                    <div class="error-content">
+                        <div class="error-icon">⚠️</div>
+                        <h3>خطأ في التحميل</h3>
+                        <p>حدث خطأ أثناء تحميل البث المباشر</p>
+                        <button class="retry-btn" onclick="retryLoad()">إعادة المحاولة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button class="control-btn" id="fullscreenBtn" onclick="toggleFullscreen()">
+                    <span class="btn-icon">⛶</span>
+                    <span class="btn-text">وضع ملء الشاشة</span>
+                </button>
+                
+                <button class="control-btn" id="rotateBtn" onclick="toggleOrientation()">
+                    <span class="btn-icon">🔄</span>
+                    <span class="btn-text">تدوير</span>
+                </button>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
