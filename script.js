@@ -1,5 +1,5 @@
 // YouTube URL Configuration
-const YOUTUBE_URL = 'https://youtu.be/u5r-XTJ5tEA?si=3VN7DzAE6SNk2BUe';
+const YOUTUBE_URL = 'https://youtu.be/u5r-XTJ5tEA?si=3VN7DzAE6SNk2BUej';
 
 // Global Variables
 let isFullscreen = false;
@@ -610,3 +610,4 @@ window.addEventListener('load', () => {
 window.toggleFullscreen = toggleFullscreen;
 window.toggleOrientation = toggleOrientation;
 window.retryLoad = retryLoad;
+
